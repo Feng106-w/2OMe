@@ -1,4 +1,4 @@
-# train_caps_fusion.py
+# train_fusion.py
 import os
 import copy
 import argparse
@@ -91,13 +91,13 @@ def main():
     parser.add_argument("--test_fasta",  type=str, default="data/Independent_Test_Set.fasta")
     parser.add_argument("--train_cgr",   type=str, default="data/Benchmark_Set8.txt")
     parser.add_argument("--test_cgr",    type=str, default="data/Independent_Test_Set8.txt")
-    parser.add_argument("--pretrained_dir", type=str, default="models_folder")
-    parser.add_argument("--batch_size", type=int, default=64)
-    parser.add_argument("--epochs", type=int, default=200)
-    parser.add_argument("--patience", type=int, default=10, help="Early stopping patience on Validation ACC")
-    parser.add_argument("--caps_nums", type=str, default="4,8,16,32")
-    parser.add_argument("--save_dir", type=str, default="checkpoints_caps")
-    parser.add_argument("--pred_csv", type=str, default="results/test_pred.csv",
+    parser.add_argument("--pretrained_dir", type=str, default=" ")
+    parser.add_argument("--batch_size", type=int, default= )
+    parser.add_argument("--epochs", type=int, default= )
+    parser.add_argument("--patience", type=int, default= , help="Early stopping patience on Validation ACC")
+    parser.add_argument("--caps_nums", type=str, default=" ")
+    parser.add_argument("--save_dir", type=str, default=" ")
+    parser.add_argument("--pred_csv", type=str, default=" ",
                         help="The CSV path for saving the test set probabilities and labels")
     args = parser.parse_args()
 
