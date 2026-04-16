@@ -13,7 +13,7 @@ This repository provides the implementation of Caps-2OMe, a deep learning framew
 
 ## Repository Structure
 
-```text
+```
 Caps-2OMe/
 ├── data/
 │   ├── fused_dataset.py
@@ -25,13 +25,34 @@ Caps-2OMe/
 │   ├── fusion_frontend.py
 │   └── capsnet_8x8.py
 ├── train.py
-```text
+```
 
 ## Installation
 
 To get started, first clone the repository to your local machine and install the required Python packages:
 
-```bash
-git clone https://github.com/yourname/Caps-2OMe.git
+```
+git clone [https://github.com/yourname/Caps-2OMe](https://github.com/Feng106-w/2OMe).git
 cd Caps-2OMe
 pip install -r requirements.txt
+```
+
+Then, download the pretrained RNA-FM and place it under the specified folder.
+```
+models_folder/RNA-FM_pretrained.pth
+```
+
+## Training
+
+```
+python train_caps_fusion.py \
+  --train_fasta data/Benchmark_Set.fasta \
+  --test_fasta data/Independent_Test_Set.fasta \
+  --train_cgr data/Benchmark_Set8.txt \
+  --test_cgr data/Independent_Test_Set8.txt \
+  --pretrained_dir models_folder \
+  --batch_size 64 \
+  --epochs 100 \
+  --caps_nums 8
+```
+
