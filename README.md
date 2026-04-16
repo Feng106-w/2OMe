@@ -10,3 +10,17 @@ This repository provides the implementation of Caps-2OMe, a deep learning framew
 
 ## Framework
 ![Caps-2OMe framework](Workflow.png)
+
+## Repository Structure
+
+```text
+Caps-2OMe/
+├── data/
+│   ├── Benchmark_Set.fasta
+│   ├── Independent_Test_Set.fasta
+│   ├── Benchmark_Set8.txt
+│   └── Independent_Test_Set8.txt
+├── models/
+│   ├── fusion_frontend.py
+│   └── capsnet_8x8.py
+├── train_caps_fusion.py
