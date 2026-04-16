@@ -16,6 +16,7 @@ This repository provides the implementation of Caps-2OMe, a deep learning framew
 ```text
 Caps-2OMe/
 ├── data/
+│   ├── fused_dataset.py
 │   ├── Benchmark_Set.fasta
 │   ├── Independent_Test_Set.fasta
 │   ├── Benchmark_Set8.txt
@@ -23,4 +24,14 @@ Caps-2OMe/
 ├── models/
 │   ├── fusion_frontend.py
 │   └── capsnet_8x8.py
-├── train_caps_fusion.py
+├── train.py
+```text
+
+## Installation
+
+To get started, first clone the repository to your local machine and install the required Python packages:
+
+```bash
+git clone https://github.com/yourname/Caps-2OMe.git
+cd Caps-2OMe
+pip install -r requirements.txt
